@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>        
+      <title>{{ title }}</title>
+    <link rel="shortcut icon" href="../assets/images/ico/favicon.ico">
+</head><!--/head-->
+
+<body>
+
+    <header id="header">
+        <div class="top-bar">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6 col-xs-4">
+                        <div class="top-number"><p><i class="fa fa-phone-square"></i>  +0123 456 70 90</p></div>
+                    </div>
+                    <div class="col-sm-6 col-xs-8">
+                       <div class="social">
+                            <ul class="social-share">
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li> 
+                            </ul>
+                       </div>
+                    </div>
+                </div>
+            </div><!--/.container-->
+        </div><!--/.top-bar-->
+
+        <nav class="navbar navbar-inverse" role="banner">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#home"><img src="../assets/images/zatayu-logo.png" alt="logo"></a>
+                </div>
+        
+                <div class="collapse navbar-collapse navbar-right">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="#home">Home</a></li>
+                        <li><a href="#logout">Logout</a></li>
+                    </ul>
+                </div>
+            </div><!--/.container-->
+        </nav><!--/nav-->
+  </header><!--/header-->
+
+    <section id="content" class="shortcode-item">
+        <div class="container">
+            <div class="row wow fadeInDown">
+                <div class="col-xs-12">
+                    <div class="card hovercard">
+        <div class="card-background">
+            <img class="card-bkimg" alt="" src="../assets/images/bg3.jpg">
+            <!-- http://lorempixel.com/850/280/people/9/ -->
+        </div>
+        
+        <div class="card-info"> <span class="card-title">Welcome - {{user.firstName}} {{user.lastName}}</span>
+
+        </div>
+    </div> 
+                    <div class="tab-wrap">
+                        <div class="media">
+                            <div class="parrent pull-left">
+                                <ul class="nav nav-tabs nav-stacked">
+                                    <li class="active"><a href=".tab1" data-toggle="tab" class="analistic-01">Profile</a></li>
+                                    <li class=""><a href=".tab2" data-toggle="tab" class="analistic-02" data-ng-click="subscriptiondetails()">Subscription</a></li>
+                                    <li class=""><a href=".tab3" data-toggle="tab" class="tehnical" data-ng-click="faqs()">FAQs</a></li>
+                                    <li class=""><a href=".tab4" data-toggle="tab" class="tehnical" data-ng-click="writeus()">Write Us</a></li>
+                                    <li class=""><a href=".tab5" data-toggle="tab" class="tehnical" data-ng-click="speakus()">Speak Us</a></li>
+                                    <li class=""><a href=".tab6" data-toggle="tab" class="tehnical" data-ng-click="whatsnew()">What's New</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="parrent media-body">
+                                <div class="tab-content">
+                                  <div class="tab1 tab-pane active in">
+                                        <div class="panel panel-info">
+                                          <div class="panel-heading">
+                                              <h3 class="panel-title text-center">User Profile</h3>
+                                            </div>                                          
+                                            <div class="panel-body">
+                                              <div class="row">               
+                                                <div class=" col-xs-12"> 
+                                                  <table class="table table-user-information">
+                                                    <tbody>
+                                                      <tr>
+                                                        <td>Name</td>
+                                                        <td>{{user.firstName}} {{user.lastName}}</td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td>Passwprd</td>
+                                                        <td>*********<a href="" style="margin-left:25px;" data-toggle="modal" data-target="#myModal"><small>Change Password</small></a></td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td>Email</td>
+                                                        <td><a href="mailto:info@support.com">{{ user.emailId }}</a></td>
+                                                      </tr>
+                                                   
+                                                         <tr>
+                                                        <td>Contact Number</td>
+                                                        <td>{{user.contactNo}}</td>
+                                                      </tr>
+                                                        <tr>
+                                                        <td>Address</td>
+                                                        <td>{{user.address}}</td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td>Organisation</td>
+                                                        <td>{{user.organization}}</td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td>Postal Code</td>
+                                                        <td>{{user.pinCode}}</td>                                                           
+                                                      </tr>                                                      
+                                                      <tr>
+                                                        <td></td>
+                                                        <td class="text-right"><a href="#editProfile" data-original-title="Edit this user" data-toggle="tooltip" type="button" class="btn btn-sm btn-warning"><i class="glyphicon glyphicon-edit"></i></a></td>
+                                                        </tr>
+                                                     
+                                                    </tbody>
+                                                  </table>
+        
+                                                </div>
+                                              </div>
+                                            </div>                                                                                         
+                                        </div>
+                                     </div>
+                                    <div class="tab2 tab-pane">
+                                      <div class="panel panel-info">
+                                          <div class="panel-heading">
+                                              <h3 class="panel-title text-center">Subscription Details</h3>
+                                            </div>                                          
+                                            <div class="panel-body">
+                                              <div class="row">               
+                                                <div class=" col-xs-12"> 
+                                                  <table class="table table-user-information">
+                                                    <tbody>
+                                                      <tr>
+                                                        <td>Plan Type</td>
+                                                        <td>{{subscriptionDetails.planType}}</td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td>Subscription Date</td>
+                                                        <td>{{subscriptionDetails.subscriptionDate}}</td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td>User</td>
+                                                        <td>{{subscriptionDetails.user}}</td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td>Space</td>
+                                                        <td>{{subscriptionDetails.space}}</td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td>Validity</td>
+                                                        <td>{{subscriptionDetails.validity}}</td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td>Next Renewal Date</td>
+                                                        <td>{{subscriptionDetails.nextRenewalDate}}</td>
+                                                      </tr> 
+                                                      <tr>
+                                                        <td>Cost</td>
+                                                        <td>{{subscriptionDetails.cost}}</td>
+                                                      </tr>
+                                                      <tr>                                                  
+                                                        <td>Last Payment Details</td>
+                                                        <td>{{subscriptionDetails.lastPaymentDetails}}</td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td></td>
+                                                        <td><a href="#subscription" class="btn btn-primary">Upgrade Subscription Plan</a></td>
+                                                      </tr>
+                                                    </tbody>
+                                                  </table>
+                                                </div>
+                                              </div>
+                                            </div>                                                                                         
+                                        </div>
+                      </div>                               
+
+                                     <div class="tab3 tab-pane">
+                                      <div class="panel panel-info">
+                                        <div class="panel-heading">
+                                              <h3 class="panel-title text-center">FAQs</h3>
+                                            </div>
+                                        </div>
+                                        <div class="accordion">
+                                            <div class="panel-group" id="accordion1">
+                                              <div class="panel panel-default" data-ng-repeat="faq in faqs">
+                                                <div class="panel-heading active" data-ng-if="faq.Sr=='1'">
+                                                  <h3 class="panel-title">
+                                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href=".collapseOne1">
+                                                      {{faq.Q}}
+                                                      <i class="fa fa-angle-right pull-right"></i>
+                                                    </a>
+                                                  </h3>
+                                                </div>
+                                                <div class="panel-heading"  data-ng-if="faq.Sr!='1'">
+                                                  <h3 class="panel-title">
+                                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href=".collapseTwo1">
+                                                     {{faq.Q}}
+                                                      <i class="fa fa-angle-right pull-right"></i>
+                                                    </a>
+                                                  </h3>
+                                                </div>
+                                                <div id="" class="collapseOne1 panel-collapse collapse in" data-ng-if="faq.Sr=='1'">
+                                                  <div class="panel-body">
+                                                      <div class="media accordion-inner">
+                                                            <div class="media-body">
+                                                                 <p>{{faq.Ans}}</p>
+                                                            </div>
+                                                      </div>
+                                                  </div>
+                                                </div>
+                                                <div id="" class="collapseTwo1 panel-collapse collapse"  data-ng-if="faq.Sr!='1'">
+                                                  <div class="panel-body">
+                                                   {{faq.Ans}}
+                                                  </div>
+                                                </div>
+                                              </div>                                                          
+                                              
+                                            </div><!--/#accordion1-->
+                                      </div>
+                                        <a href="#" class="btn btn-primary pull-right" style="margin-bottom:20px;"><span class="pull-left">Download FAQs</span><i class="fa fa-download pull-right" style="margin:3px 0 0 10px; font-size:18px;"></i></a>
+                                     </div>
+                                     
+                                     <div class="tab4 tab-pane">
+                                      <div class="panel panel-info">
+                                        <div class="panel-heading"><a href="#home" title="Write Us" type="button" class="btn btn-sm btn-info pull-left"  data-toggle="modal" data-target="#myModal2"><i class="glyphicon glyphicon-edit"></i></a>
+                                              <h3 class="panel-title text-center">Write Us</h3>
+                                            </div>
+                                        </div>
+                                        <div class="clients-area center">
+                                            <h2>What our client says</h2>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-md-4" data-ng-repeat="client in writeus">
+                                                <div class="clients-comments text-center">
+                                                    <h3>{{client.comments}}</h3>
+                                                    <h4><span>-{{client.clientName}} /</span>  {{client.aboutClient}}</h4>
+                                                </div>
+                                            </div>                                           
+                                       </div>
+                                     </div>
+
+                                     <div class="tab5 tab-pane">
+                                      <div class="panel panel-info">
+                                            <div class="panel-heading">
+                                                <h3 class="panel-title text-center">Speak Us</h3>
+                                            </div>
+                                        </div>
+                                        <div class="gmap-area">
+
+                                        <div class="row">
+                                            <div class="col-xs-12 map-content">
+                                                <ul class="row">
+                                                    <li class="col-sm-6" data-ng-repeat="address in speakus">
+                                                        <address>
+                                                            <h5>{{address.country}}</h5>
+                                                            <p>{{address.street}}<br>
+                                                            {{address.landmark}}<br>
+                                                            {{address.postalCode}}</p>
+                                                            <p>Phone: {{address.phone}}<br>
+                                                            Email Address: {{address.email}}</p>
+                                                        </address>
+                                                    </li>                                                                        
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                     </div>                                     
+                                     <div class="tab6 tab-pane">
+                                      <div class="panel panel-info">
+                                            <div class="panel-heading">
+                                                <h3 class="panel-title text-center">What's New</h3>
+                                            </div>
+                                        </div>
+                                      <div class="row">
+                                            <div class="col-sm-6" data-ng-repeat="productVersion in whatsnew">
+                                              <table class="table">
+                                                <thead>
+                                                  <tr>
+                                                    <th colspan="2" class="text-center">{{productVersion.version}}</th>
+                                                  </tr>
+                                                </thead>
+                                                <tbody>
+                                                  <tr class="info" data-ng-repeat="feature in features | filter:productVersion.version" >
+                                                    <td>Feature: {{feature.feature}}</td>
+                                                    <td>Description: {{feature.description}}</td>
+                                                  </tr>                                                                                                  
+                                                </tbody>
+                                              </table>
+                                            </div>                                           
+                                        </div>
+                                     </div>
+                                </div> <!--/.tab-content-->  
+                            </div> <!--/.media-body--> 
+                        </div> <!--/.media-->     
+                    </div><!--/.tab-wrap-->               
+                </div>
+            </div><!--/.row-->
+        </div><!--/.container-->
+    </section>
+  
+    <section id="bottom">
+        <div class="container wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
+            <div class="row">
+                <div class="col-md-3 col-sm-6">
+                    <div class="widget">
+                        <h3>Footer Links</h3>
+                        <ul>
+                            <li><a href="#">Footer Links</a></li>
+                            <li><a href="#">Footer Links</a></li>
+                            <li><a href="#">Footer Links</a></li>
+                        </ul>
+                    </div>    
+                </div><!--/.col-md-3-->
+
+                <div class="col-md-3 col-sm-6">
+                    <div class="widget">
+                        <h3>Footer Links</h3>
+                        <ul>
+                            <li><a href="#">Footer Links</a></li>
+                            <li><a href="#">Footer Links</a></li>
+                            <li><a href="#">Footer Links</a></li>
+                        </ul>
+                    </div>    
+                </div><!--/.col-md-3-->
+
+                <div class="col-md-3 col-sm-6">
+                    <div class="widget">
+                        <h3>Footer Links</h3>
+                        <ul>
+                            <li><a href="#">Footer Links</a></li>
+                            <li><a href="#">Footer Links</a></li>
+                            <li><a href="#">Footer Links</a></li>
+                        </ul>
+                    </div>    
+                </div><!--/.col-md-3-->
+
+                <div class="col-md-3 col-sm-6">
+                    <div class="widget">
+                        <h3>Footer Links</h3>
+                        <ul>
+                            <li><a href="#">Footer Links</a></li>
+                            <li><a href="#">Footer Links</a></li>
+                            <li><a href="#">Footer Links</a></li>
+                        </ul>
+                    </div>    
+                </div><!--/.col-md-3-->
+            </div>
+        </div>
+    </section><!--/#bottom-->
+
+    <footer id="footer" class="midnight-blue">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 text-center">
+                    &copy; 2016 <a target="_blank" href="#" title="">Zatayu.com</a>. All Rights Reserved.
+                </div>
+            </div>
+        </div>
+    </footer><!--/#footer-->
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" my-modal role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Change Password</h4>
+        </div>
+        <form  method="post" data-ng-submit="changepassword()">
+        <div class="modal-body">          
+              <div class="row">
+                    <div class="col-xs-6 col-md-6">
+                        <input class="form-control" name="password" placeholder="Password" type="password" required data-ng-model="ChangePassword.password" />
+                    </div>
+                    <div class="col-xs-6 col-md-6">
+                        <input class="form-control" name="reenterpassword" placeholder="Confirm Password" type="password" required data-ng-model="ChangePassword.confirmPassword"/>
+                    </div>
+               </div>  
+               <p class="alert-danger">{{passwordNotMatched}}</p>           
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary pull-right" data-dismiss="modal">Cancel</button>
+            <button class="btn btn-primary pull-right" type="submit" style="margin-right:10px;">Save</button>
+        </div>
+        </form>
+      </div>
+      
+    </div>
+  </div>  
+  
+  
+  
+  <div class="modal fade" id="myModal2" my-modal role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Feedback Form</h4>
+        </div>
+        <form method="post" data-ng-submit="writefeedback()">
+        <div class="modal-body">          
+           <div class="form-group">
+                <label>Feedback/Suggestions</label>
+                <textarea rows="8" class="form-control" id="feedback" name="feedback"></textarea>
+           </div>             
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary pull-right" data-dismiss="modal">Cancel</button>
+            <button class="btn btn-primary pull-right" type="submit" style="margin-right:10px;">Send</button>
+        </div>
+        </form>
+      </div>
+      
+    </div>
+  </div> 
+
+    <script type="text/javascript">
+        $('.carousel').carousel()
+    </script>
+        <script>
+  $(document).ready(function() {
+    $('[data-toggle="tooltip"]').tooltip();    
+  });
+  </script>
+</body>
+</html>

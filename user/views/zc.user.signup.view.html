@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>{{ title }}</title>
+</head><!--/head-->
+
+<body>
+
+    <header id="header">
+        <div class="top-bar">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6 col-xs-4">
+                        <div class="top-number"><p><i class="fa fa-phone-square"></i>  +0123 456 70 90</p></div>
+                    </div>
+                    <div class="col-sm-6 col-xs-8">
+                       <div class="social">
+                            <ul class="social-share">
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li> 
+                            </ul>
+                       </div>
+                    </div>
+                </div>
+            </div><!--/.container-->
+        </div><!--/.top-bar-->
+
+        <nav class="navbar navbar-inverse" role="banner">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#home"><img src="../assets/images/zatayu-logo.png" alt="logo"></a>
+                </div>
+                
+                <div class="collapse navbar-collapse navbar-right">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="#signup">Sign Up</a></li>
+                        <li><a href="#signin">Login</a></li>                   
+                    </ul>
+                </div>
+            </div><!--/.container-->
+        </nav><!--/nav-->
+    </header><!--/header-->
+
+    <section id="sign-up">
+        <div class="container wow fadeInDown">
+                 <div class="center">
+                    <h2>Signup</h2>
+                    <p class="lead">Sign up for free zatayu cloud portal</p>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-4 col-md-offset-4 well well-sm">
+            <legend style="padding-bottom:10px;"><i class="glyphicon glyphicon-globe"></i> Sign up!</legend>
+            <form name="userForm" method="post" data-ng-submit="signup()" class="form" role="form">
+            <div class="row">
+                <div class="col-xs-6 col-md-6">
+                    <input class="form-control" id="firstname" name="firstname" placeholder="First Name" type="text" required autofocus data-ng-model="SignUpUser.firstName"/>
+                </div>
+                <div class="col-xs-6 col-md-6">
+                    <input class="form-control" id="lastname" name="lastname" placeholder="Last Name" type="text" required data-ng-model="SignUpUser.lastName"/>
+                </div>
+            </div>
+            <input class="form-control" id="email" name="email" placeholder="Email" type="email" required data-ng-model="SignUpUser.email"/>
+            <input class="form-control" id="reenteremail" name="reenteremail" placeholder="Confirm Email" type="email" required data-ng-model="SignUpUser.reenterEmail"/>
+            <input class="form-control" id="contact" name="contact" placeholder="Contac No." type="text" pattern="\d{10,12}" required data-ng-model="SignUpUser.contactNo"/>
+            <div class="row">
+                <div class="col-xs-6 col-md-6">
+                    <input class="form-control" id="password" name="password" placeholder="Password" type="password" data-ng-model="SignUpUser.password"/>
+                </div>
+                <div class="col-xs-6 col-md-6">
+                    <input class="form-control" id="reenterpassword" name="reenterpassword" placeholder="Confirm Password" type="password" data-ng-model="SignUpUser.reenterPassword"/>
+                </div>
+            </div>
+            <input class="form-control" id="organisation" name="organisation" placeholder="Organisation" type="text" data-ng-model="SignUpUser.organisation"/>
+            <input class="form-control" id="address" name="address" placeholder="Address" type="text" data-ng-model="SignUpUser.address"/>
+            <input class="form-control" id="pincode" name="pincode" placeholder="Postal Code" type="text" pattern="\d{6,10}" required data-ng-model="SignUpUser.pinCode"/>
+            <p class="text-center" style="margin:10px 0;"><a href="#">Terms &amp; conditions</a></p>
+            <button class="btn btn-lg btn-primary btn-block" type="submit">Register</button>
+            </form>
+        </div>
+
+            <div class="clearfix"></div>
+
+            <!--section-->
+        </div><!--/.container-->
+    </section><!--/about-us-->
+    
+    <section id="bottom">
+        <div class="container wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
+            <div class="row">
+                <div class="col-md-3 col-sm-6">
+                    <div class="widget">
+                        <h3>Footer Links</h3>
+                        <ul>
+                            <li><a href="#">Footer Links</a></li>
+                            <li><a href="#">Footer Links</a></li>
+                            <li><a href="#">Footer Links</a></li>
+                        </ul>
+                    </div>    
+                </div><!--/.col-md-3-->
+
+                <div class="col-md-3 col-sm-6">
+                    <div class="widget">
+                        <h3>Footer Links</h3>
+                        <ul>
+                            <li><a href="#">Footer Links</a></li>
+                            <li><a href="#">Footer Links</a></li>
+                            <li><a href="#">Footer Links</a></li>
+                        </ul>
+                    </div>    
+                </div><!--/.col-md-3-->
+
+                <div class="col-md-3 col-sm-6">
+                    <div class="widget">
+                        <h3>Footer Links</h3>
+                        <ul>
+                            <li><a href="#">Footer Links</a></li>
+                            <li><a href="#">Footer Links</a></li>
+                            <li><a href="#">Footer Links</a></li>
+                        </ul>
+                    </div>    
+                </div><!--/.col-md-3-->
+
+                <div class="col-md-3 col-sm-6">
+                    <div class="widget">
+                        <h3>Footer Links</h3>
+                        <ul>
+                            <li><a href="#">Footer Links</a></li>
+                            <li><a href="#">Footer Links</a></li>
+                            <li><a href="#">Footer Links</a></li>
+                        </ul>
+                    </div>    
+                </div><!--/.col-md-3-->
+            </div>
+        </div>
+    </section><!--/#bottom-->
+
+    <footer id="footer" class="midnight-blue">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 text-center">
+                    &copy; 2016 <a target="_blank" href="#" title="">Zatayu.com</a>. All Rights Reserved.
+                </div>
+            </div>
+        </div>
+    </footer><!--/#footer-->
+    <script type="text/javascript">
+        $('.carousel').carousel()
+    </script>
+</body>
+</html>

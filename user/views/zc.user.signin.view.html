@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>{{ title }}</title>
+</head><!--/head-->
+
+<body class="login">
+    <header id="header">
+        <div class="top-bar">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6 col-xs-4">
+                        <div class="top-number"><p><i class="fa fa-phone-square"></i>  +0123 456 70 90</p></div>
+                    </div>
+                    <div class="col-sm-6 col-xs-8">
+                       <div class="social">
+                            <ul class="social-share">
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li> 
+                            </ul>
+                       </div>
+                    </div>
+                </div>
+            </div><!--/.container-->
+        </div><!--/.top-bar-->
+
+        <nav class="navbar navbar-inverse" role="banner">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#home.view.html"><img src="../assets/images/zatayu-logo.png" alt="logo"></a>
+                </div>
+                
+                <div class="collapse navbar-collapse navbar-right">
+                    <ul class="nav navbar-nav">
+                        <li><a href="#signup">Sign Up</a></li>
+                        <li class="active"><a href="#signin">Login</a></li>
+                    </ul>
+                </div>
+            </div><!--/.container-->
+        </nav><!--/nav-->
+    </header><!--/header-->
+    <section id="login">
+        <div class="container">
+            <div class="wow fadeInDown">
+                <div class="col-sm-6 col-sm-offset-3 form-box">
+                            <div class="form-top">
+                                <div class="form-top-left">
+                                    <img src="../assets/images/login_Logo.png" alt="Zatayu">
+                                    <p>Enter your username and password to log on:</p>
+                              </div>
+                                <div class="form-top-right">
+                                    <i class="fa fa-key"></i>
+                                </div>
+                            </div>
+                            <div class="form-bottom">
+                              <form role="form" method="post" class="login-form" data-ng-submit="signin()">
+                                    <div class="form-group">
+                                            <input class="form-control" id="email" name="email" placeholder="Username (email id)" type="text" required autofocus data-ng-model="SignInUser.email" />            
+                                    </div>
+                                    <div class="form-group">
+                                        <input class="form-control" id="password" name="password" placeholder="Password" type="password" required data-ng-model="SignInUser.password" />                                          
+                                    </div>
+                                    <p class="alert-danger"> {{ invalidUserNameOrPwd }} </p>
+                                    <div class="form-group">
+                                        <input type="checkbox" tabindex="3" class="" name="remember" id="remember">
+                                        <label for="remember"> Remember Me</label>
+                                        <a href="" class="pull-right" data-toggle="modal" data-target="#myModal">Forgot Password?</a>
+                                    </div>
+                                <button type="submit" class="btn btn-lg btn-primary btn-block">Sign in!</button>                                    
+                              </form>
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                
+            </div>
+            <div class="clearfix"></div>
+            <!--section-->
+        </div><!--/.container-->
+    </section><!--/about-us-->
+	
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" my-modal role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Enter Your Registered email Id</h4>
+        </div>
+        <form  method="post" data-ng-submit="forgotpassword()">
+        <div class="modal-body">          
+              <div class="row">
+                    <div class="col-md-12">
+					<input type="email" required="" placeholder="Email" name="email" class="form-control">
+                    </div>
+               </div>  
+               <p class="alert-danger">Incorrect Email</p>           
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary pull-right" data-dismiss="modal">Cancel</button>
+		  <button type="submit" class="btn btn-primary pull-right" style="margin-right:10px;">Submit</button>
+ 
+        </div>
+        </form>
+      </div>
+      
+    </div>
+  </div> 	
+	
+    <script type="text/javascript">
+        $('.carousel').carousel()
+    </script>
+</body>
+</html>

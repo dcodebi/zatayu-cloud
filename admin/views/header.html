@@ -1,0 +1,51 @@
+<section id='header' class='header-container header-fixed' ng-if='token'>
+    <header class='top-header clearfix'>
+        <div class='logo'>
+            <a>
+                <img src='images/logo.png' style="max-height:40px;width:auto;">
+            </a>
+        </div>
+        <div class='menu-button' toggle-off-canvas>
+            <span class='icon-bar'></span>
+            <span class='icon-bar'></span>
+            <span class='icon-bar'></span>
+        </div>
+        <div class='top-nav'>
+            <ul class='nav-left list-unstyled'>
+                <li>
+                    <a data-toggle-nav-collapsed-min class='toggle-min'><i class='fa fa-bars'></i></a>
+                </li>
+            </ul>
+            <ul class='nav navbar-nav nav-right pull-right list-unstyled'>
+                <li>
+                    <a class='btn btn-link' ng-click='logout()'><span class='text-danger'><i class='fa fa-lg fa-sign-out'></i>&nbsp; Logout</span></a>
+                </li>
+                <li>&nbsp;</li>
+            </ul>
+        </div>
+    </header>
+</section>
+<div class='main-container'>
+    <aside id='nav-container' class='nav-container nav-fixed nav-vertical' ng-if='token'>
+        <div class='nav-wrapper'>
+            <ul id='nav' class='nav' data-slim-scroll data-collapse-nav data-highlight-active>
+                <li ng-class='{active: current_state === "merchant.default"}'>
+                    <a ui-sref='.default'> <i class='fa fa-dashboard'></i><span>Order PANEL</span></a>
+                </li>
+
+                <li ng-class='{active: current_state === "merchant.stores_manage" || current_state === "merchant.stores_create" || current_state === "merchant.stores_edit" || current_state === "merchant.stores_view"}'>
+                    <a ui-sref='.stores_manage'> <i class='fa fa-magic'></i><span>STORES</span></a>
+                </li>
+                <li ng-class='{active: current_state === "merchant.items_manage" || current_state === "merchant.items_create" || current_state === "merchant.items_edit" || current_state === "merchant.items_view"}'>
+                    <a ui-sref='.items_manage'> <i class='fa fa-file-text-o'></i><span>ITEMS</span></a>
+                </li>
+                <li ng-class='{active: current_state === "merchant.offers_manage" || current_state === "merchant.offers_create" || current_state === "merchant.offers_edit" || current_state === "merchant.offers_view"}'>
+                    <a ui-sref='.offers_manage'> <i class='fa fa-table'></i><span>OFFERS</span></a>
+                </li>
+            </ul>
+        </div>
+    </aside>
+    <div id='content' class='content-container'>
+        <section ui-view class='view-container {{admin.pageTransition.class}}'></section>
+    </div>
+</div>
